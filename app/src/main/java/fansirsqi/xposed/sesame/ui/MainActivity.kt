@@ -31,7 +31,6 @@ import fansirsqi.xposed.sesame.entity.UserEntity
 import fansirsqi.xposed.sesame.net.SecureApiClient
 import fansirsqi.xposed.sesame.newui.DeviceInfoCard
 import fansirsqi.xposed.sesame.newui.DeviceInfoUtil
-import fansirsqi.xposed.sesame.newui.WatermarkView
 import fansirsqi.xposed.sesame.util.AssetUtil
 import fansirsqi.xposed.sesame.util.Detector
 import fansirsqi.xposed.sesame.util.Detector.getRandomApi
@@ -47,10 +46,6 @@ import kotlinx.coroutines.withContext
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
 
-//   欢迎自己打包 欢迎大佬pr
-//   项目开源且公益  维护都是自愿
-//   但是如果打包改个名拿去卖钱忽悠小白
-//   那我只能说你妈死了 就当开源项目给你妈烧纸钱了
 class MainActivity : BaseActivity() {
     private val TAG = "MainActivity"
     private var userNameArray = arrayOf("默认")
@@ -69,7 +64,7 @@ class MainActivity : BaseActivity() {
         setContentView(R.layout.activity_main)
         oneWord = findViewById(R.id.one_word)
         val deviceInfo: ComposeView = findViewById(R.id.device_info)
-        val v = WatermarkView.install(this)
+        
         deviceInfo.setContent {
             val customColorScheme = lightColorScheme(
                 primary = Color(0xFF3F51B5), onPrimary = Color.White, background = Color(0xFFF5F5F5), onBackground = Color.Black
